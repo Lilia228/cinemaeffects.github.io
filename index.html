@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Спецэффекты в Кино</title>
+    <style>
+    @import url('https://fonts.googleapis.com/css?family=PT+Sans');
+        body{
+            margin: 0px;
+            width: 320px;
+            text-align: center;
+            position: relative;
+            font-family: 'PT Sans', sans-serif;
+            background-color:#221f1f;
+        }
+        h1,h2,h3{
+            padding: 4px;
+            border: 6px outset #628eaf;
+            background-color: #283879;
+            color: #ffffff;
+        }
+        hr{width: 70%}
+        nav{
+            text-align: left;
+            width: 200px;
+            position: fixed;
+            top: 0px;
+            left: -200px;
+            background: #405981;
+            color: #fafafa;
+            height: 100vh;
+            transition: 0.6s;
+            border-right: 6px solid #193143;
+        }
+        nav>p{
+            font-size:1.4rem;
+            color: #191d18;
+            text-align: center;
+            background-color: white;
+            padding: 2px;
+            border: 4px solid #193143;
+        }
+        li{ padding: 8px}
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        button{
+            position: absolute;
+            top: 10px;
+            right: -40px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #396a9b
+        }
+        button>div{
+            background-color: white;
+            height: 5px;
+            margin: 5px;
+            border-radius: 20%;
+        }
+        .vis{
+            left: 0px;
+        }
+        .MainContent{
+            width: 300px;
+            margin: 10px 5px;
+            padding: 5px;
+            background-color:rgba(247, 247, 247, 0.8);
+        }
+        .pictures{
+            width: 276px;
+            margin: 0px 10px
+        }
+        .pictures>img{
+            width: 100%;
+            height: 100%;
+            border: 2px solid #0d6bb1;
+            border-radius: 2%;
+
+        }
+        article{
+            background-color: white;
+        }
+        article>header{
+            background-color: #1d1e1f;
+            padding-bottom: 5px;
+            
+        }
+        footer{
+            line-height: 2px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            background-color: #283879;
+            border: 6px outset #628eaf;
+        }
+        
+        @media(min-width:320px){
+            body{width: 100vw}
+            .MainContent{width:93vw}
+            .pictures{width:88vw}
+            button{top: 60px;}
+            article>p{padding: 1vw}
+        }
+        @media(min-width:768px){
+            body{width: 100vw}
+            .MainContent{
+                border:0.5vw solid black;
+                border-radius: 5px;
+                width:99vw;
+                margin: 0px;
+                padding: 10px 0px;
+            }
+            .a1{background:  url(http://tapety.tja.pl/obrazki/tja_normalne/78099.jpg) 50%/cover}
+            .a2{background: url(https://hdwallpapers8k.com/wp-content/uploads/batman_v_superman_dawn_of_justice_new-wallpaper-1920x1080-1024x768.jpg) 50%/cover}
+            .a6{background:url(http://liport.ru/uploads/posts/2014-06/kinokadr-vs-semochnaya-ploschadka-2_1.jpeg) 50%/cover }
+            .a3,.a4, .a5, .a7, .a8, .a9, .a10, .a11{background: url(http://center-wd.ru/blog-materials/96/7.png) 50%}
+            .art{
+                width:48vw;
+                margin: 10px 25vw;   
+            }
+            .pictures{width: 46vw}
+            button{display: none}
+            nav{
+                transition: 0s;
+                top:105px;
+                left: 0px;
+                width: 25vw;
+                background: rgba(33, 43, 57,0.8);
+                border-top: 6px solid #193143;
+            }
+            article>p{padding: 1vw}
+        }
+        @media(min-width:1366px) {
+            nav{width: 15vw}
+        }        
+    </style>
+</head>
+
+<body>
+  
+   <header>
+      <h1>Создание спецэффектов в кино</h1>
+      <nav id="menu">
+          <p><strong>Содержание</strong></p>
+          <ul>
+              <li><a href="#art1">Немного истории</a></li>
+              <li><a href="#art2">Аниматроника</a></li>
+              <li><a href="#art3">Рисованные декорации</a></li>
+              <li><a href="#art4">Компьютерная Графика</a></li>
+              <li><a href="#art5">Motion Capture</a></li>
+              <li><a href="#art6">Chroma Key</a></li>
+              <li><a href="#art7">Трёхмерные графические редакторы</a></li>
+              <li><a href="#art8">Bullet Time</a></li>
+          </ul>
+          <button id="hide">
+          <div></div>
+          <div></div>
+          <div></div>
+          </button>
+      </nav>
+   </header>
+   <main>
+   
+   <div class="MainContent a1">
+      <div class="art">
+       <article id="art0">
+          <p>Сегодня невозможно представить себе кино без красивых и зрелищных спецэффектов. Именно они позволяют нам окунуться в фантастические миры, совершать захватывающие путешествия с главными героями. И чтобы мы смогли все это увидеть, над фильмом проводится огромная работа целой команды профессионалов киноиндустрии.</p>
+          <div class="pictures">
+          <img src="http://www.ligakino.ru/upload/iblock/cbd/cbdc2cbc98744dfcaa80d1bf40bbfb24.jpg">
+          <img src="http://i.ucrazy.ru/files/pics/2014.11/speceffektik20.jpg" alt="">
+           </div>
+          <p> Сегодня мы узнаем, какие основные приемы используют авторы для создания спецэффектов!</p>
+       </article>
+       </div>
+       </div>
+       
+       <hr size="8px" align="center" color="#0e1e4b">
+       
+       <div class="MainContent a2">
+       <div class="art">
+       <article id="whatisit">
+          <header>
+           <h2>Что такое Спецэффекты?</h2>
+           <div class="pictures"><img src="https://bashny.net/uploads/images/00/00/13/2013/07/30/eb4cdeaa99.jpg" alt=""></div>
+           </header>
+           <p>Спецэффект или специальный эффект,  (англ. special effect, сокр. SPFX, SFX или FX) — совокупность технологий кинематографа и телевидения, в результате которых на экране получается изображение, не существовавшее в действительности, но для зрителей не отличающееся от снятого в павильоне или на натуре. Спецэффекты также часто применяются, когда естественная съёмка сцены слишком затратна по сравнению со спецэффектом (например, съёмка масштабного взрыва). Спецэффекты применяются и для улучшения или модификации уже предварительно отснятого материала
+           </p>
+       </article>
+       </div>
+       </div>
+       
+       <hr size="8px" align="center" color="#0e1e4b">
+       
+       <div class="MainContent a3">
+       <div class="art">
+       <article id="art1">
+          <header>
+           <h3>Немного истории</h3>
+          </header>
+          <p>Первым фильмом, в котором спецэффекты играли существенную роль, считается трехминутная лента Мельеса «Замок Дьявола» (фр. Le manoir du diable, 1896), в которой зрителю были продемонстрированы появления, исчезновения и трансформации людей и предметов в антураже готического замка. Некоторые примеры ранних спецэффектов получены с помощью колоризации — ручного раскрашивания кадров.</p>
+           <div class="pictures">
+           <img src="http://s1.cdnnz.net/films/i/5/7/8/okino.ua-chateau-hante-le-392578-a.jpg" alt="">
+           </div>
+          <p>Родоначальником спецэффектов можно назвать Альфреда Кларка, который создал первый зрелищный кадр в 1895 году. Суть его заключалась в детализации казни королевы Шотландии: после замаха палача на место актрисы подкладывали манекена.</p>
+          <p>Отправной точкой в создании спецэффектов считается кино-эпопея «Звездные войны» 1977-ого года выпуска. Усилиями режиссера Джорджа Лукаса этот видео шедевр порадовал зрителей причудливыми инопланетянами, космическими кораблями и легендарными световыми мечами. Представителей чужеземной фауны удалось воссоздать посредством покадровой съемки простых кукол, а изображения накладывались на синие экраны.</p>
+          <div class="pictures">
+          <img src="http://nevsepic.com.ua/uploads/posts/2011-10/1317686978_www.nevsepic.com.ua_starwars-on-stage-46.jpg" alt="">
+          </div>
+          <p>После оглушительного успеха картины Лукас реализовал свою киностудию «Industrial Light and Magic», которая разрабатывала инновационные спецэффекты. Компьютерная графика громко заявила о себе в работах Джеймса Камерона («Терминатор 2: Судный День», «Бездна») и Стивена Спилберга («Парк Юрского периода»).</p> 
+           <div class="pictures">
+               <img src="http://wallpapercave.com/wp/JpZGsC8.jpg" alt="">
+           </div>
+          <p>Так какие же основные приемы в кинематографе используются для создания спецэффектов?</p>
+       </article>
+       </div>
+       </div>
+       
+       <hr size="8px" align="center" color="#0e1e4b">
+       
+       <div class="MainContent a4">
+       <div class="art">
+       <article id="art2">
+           <header>
+               <h3>Аниматроника</h3>
+           
+           <div class="pictures">
+           <img src="https://cosmicthings.ru/uploads/images/a/n/i/animatronik.jpg" alt="">
+           </div>
+           </header>
+           <p>Как делают спецэффекты в кино, чтобы фантастические создания казались зрителю реальными? Достигается это благодаря применению аниматроники. Суть технологии - в подготовке роботизированных макетов подвижных объектов. Их устанавливали в определенном месте, далее фотографировали, при этом чуть-чуть изменяя их расположение, а затем фотографии объединяли. В конченом итоге получалась достаточно плавная анимация. </p>
+           <div class="pictures">
+           <img src="http://f.kinozon.tv/%D1%84%D0%BE%D1%82%D0%BE_%D1%81%D0%BE_%D1%81%D1%8A%D1%91%D0%BC%D0%BE%D0%BA/6621/%D0%9F%D0%B0%D1%80%D0%BA_%D0%AE%D1%80%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BF%D0%B5%D1%80%D0%B8%D0%BE%D0%B4%D0%B0-13.jpg" alt="">
+           </div>
+           <p>Впервые идея была реализована Стивеном Спилбергом в ходе съемок картины «Парк Юрского периода» еще в 1993 году.</p>
+           <div class="pictures">
+           <img src="http://yumuz.ru/uploads/images/a/n/d/andrej_lapinj_seminar_po_tantre_odno_tolko_nebo_barabani_iz_uprazhnenija_park_urskogo_perioda.jpg" alt="">
+           </div>
+       </article>
+       </div>
+       </div>
+       
+       <hr size="8px" align="center" color="#0e1e4b">
+       
+       <div class="MainContent a5">
+       <div class="art">
+       <article id="art3">
+           <header>
+               <h3>Рисованные декорации</h3>
+           <div class="pictures">
+           <img src="http://pics2.pokazuha.ru/p441/k/u/9306358guk.jpg" alt="Отель Гранд Будапешт">
+           </div>
+           </header>
+           <p>В начале прошлого века в кино стали широко прибегать к приему, известному как matte painting. Тогда еще не было компьютерной графики. Поэтому задний фон, который использовался при съемках фильмов, художникам приходилось рисовать вручную. Задачей аниматоров являлась подготовка бэкграундов, которые органично сочетались с реквизитом.</p>
+       </article>
+           </div>
+           </div>
+           
+       <hr size="8px" align="center" color="#0e1e4b">
+       
+       <div class="MainContent a6">
+       <div class="art">
+       <article id="art4">
+           <header>
+               <h2>Компьютерная Графика</h2>
+           <div class="pictures">
+               <img src="http://img.anews.com/media/posts/images/20141204/c8d6290ae12149af93e03647780e7f48.jpg" alt="">
+           </div>
+           </header>
+           <p>Применение компьютерной графики в фильмах произвело революцию в создании спецэффектов. Сейчас графика стала настолько совершенна, что практически не отличима от реальности.</p>
+       </article>
+       </div>
+       </div>
+       
+       <hr size="8px" align="center" color="#0e1e4b">
+       
+       <div class="MainContent a7">
+       <div class="art">
+       <article id="art5">
+           <header>
+               <h3>Motion Capture</h3>
+           <div class="pictures">
+           <img src="https://uploadcare.cmtt.ru/863c8f15-167e-4a9b-baea-d98732642492/-/resize/1280/-/quality/lightest/" alt="">
+           </div>
+           </header>
+           <p>Одним из наиболее популярных приемов при съемках фильмов выступает motion capture. Суть технологии заключается в следующем. Исполнитель роли облачается в специальный костюм, покрытый многочисленными датчиками. Последние заносят информацию о движениях человека в компьютер. Также информация о передвижениях актера записывается на множество камер, расставленных вокруг него.  Благодаря полученным данным на экране создается подвижная трехмерная модель.</p>
+           <p>Впервые технология захвата движений была удачно реализована при съемках первой части кинотрилогии «Властелин колец». Персонаж Голум, в роли которого выступил знаменитый британский актер Энди Серкис, активно взаимодействовал с окружением и прочими героями именно благодаря motion capture. Каждая сцена с участием артиста одновременно снималась более чем десятком камер. На основе полученной картинки создавалась единая трехмерная модель, которая реалистично передавала не только телодвижения актера, но и живую мимику лица. </p>
+           <div class="pictures">
+           <img src="http://www.animationxpress.com/wp-content/uploads/2015/04/Gollum.png" alt="">
+           </div>
+       </article>
+       </div>
+       </div>
+       
+       <hr size="8px" align="center" color="#0e1e4b">
+       
+       <div class="MainContent a8">
+       <div class="art">
+       <article id="art6">
+           <header>
+               <h3>Chroma Key</h3>
+           <div class="pictures">
+           <img src="http://henrycavill.org/images/Films/2013-Man-of-Steel/extra/4/00023.m2ts006827.jpg" alt="">
+           </div>
+           </header>
+           <p>Суть данного приема проста, актёр снимается на фоне зелёного или синего полотна ткани (рир-экран или rear screen), а после вместо этого полотна ставят изображение. Таким образом в одном павильоне можно снять большую часть фильма, в пример можно привести фильм “Марсианин”, где половина сцен происходит на Марсе. Чтобы хорошо спроецировать необходимую картинку на рир-экран, нужно использовать монотонный мягкий цвет, а потому используются обычно либо зелёный, либо синий.</p>
+       </article>
+       </div>
+       </div>
+       
+       <hr size="8px" align="center" color="#0e1e4b">
+       
+       <div class="MainContent a9">
+       <div class="art">
+       <article id="art7">
+           <header>
+               <h3>3D графические редакторы</h3>
+           <div class="pictures">
+           <img src="http://www.rockthe3d.com/wp-content/uploads/2014/12/foundry_mari_avatar_screenshot.jpg" alt="">
+           </div>
+           </header>
+           <p>Без них невозможно сделать ни одно объёмное чудище или существо, с ними можно построить даже целый город. Чтобы добавить, допустим, Годзиллу, нужно сначала смоделировать ее. Делается это в трёхмерных графических редакторах, а процесс больше походит на создание скульптуры. Нужно не только уметь обращаться с такими программами, но и знать основы анатомии, композиции, и т.д. Как правило, таких людей тоже называют художниками, так как принцип их работы почти одинаков. Обычно сначала делается примитивная модель персонажа, чтобы понять, как он будет вести себя в кадре, сколько будет занимать пространства, как должны взаимодействовать с ним актёры. А затем уже делается высококачественная модель для монтажа.</p>
+       </article>
+       </div>
+       </div>
+       
+       <hr size="8px" align="center" color="#0e1e4b">
+       
+       <div class="MainContent a10">
+       <div class="art">
+       <article id="art8">
+           <header>
+               <h3>Bullet Time</h3>
+           <div class="pictures">
+           <img src="https://www.mirf.ru/wp-content/uploads/2015/09/Tros11.jpg" alt="">
+           </div>
+           </header>
+           <p>В свое время по-настоящему уникальные, инновационные спецэффекты в кино удалось реализовать братьям Вачовски – режиссерам культового блокбастера «Матрица». Особого внимания заслуживает прием, известный как Bullet Time (время пули). Режиссеры фильма установили на площадке несколько десятков камер. Они одновременно снимали человека в движении с самых различных ракурсов. Таким образом, у зрителя создавалось впечатление, что оператор двигается вокруг актера, пока тот пытается уклониться от пули в падении. Позже аналогичные спецэффекты в кино неоднократно использовались и другими режиссерами.</p>
+           <div class="pictures">
+           <img src="http://1.bp.blogspot.com/-qKyxOaVdQqg/Ts56vcRvXkI/AAAAAAAAABQ/WxDNLtyEwhQ/s1600/1999_Gaeta%25252BWachowski-Bros_The-Matrix_bullet-time_1999.jpg" alt="">
+           </div>
+       </article>
+       </div>
+       </div>
+       
+       <hr size="8px" align="center" color="#0e1e4b">
+       
+       <div class="MainContent a11">
+       <div class="art">
+       <article>
+           <p>Мы рассмотрели одни из самых известных и основных приемов создания спецэффектов в кино. Но существует еще множество других, с помошью которых авторы погружают зрителей в мир своих фантазий и дарят нам радость при каждом походе в кинотеатр.  </p>
+           <div class="pictures">
+           <img src="http://www.cosmo.com.ua/i/publications/1019/500_333/vishel-treyler-vtoroy-chasti-krutoy-komedii-dedpul-1838-43922.jpg" alt="">
+           </div>
+       </article>
+       </div>
+       </div>
+       
+       <hr size="8px" align="center" color="#0e1e4b">
+   </main>
+    <footer>
+        <p>Авторы: Попрыткина Лилия и Алла</p>
+        <p>Почта: <a>lplisa@yandex.ru</a></p>
+    </footer>
+    <script>
+    hide.addEventListener('click',function(){
+        menu.classList.toggle('vis');
+    });
+    </script>
+</body>
+</html>
